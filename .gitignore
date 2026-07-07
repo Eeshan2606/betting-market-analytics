@@ -1,0 +1,17 @@
+.env
+service-account*.json
+.dlt/secrets.toml
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+*.duckdb
+*.duckdb.wal
+*.parquet
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+.dagster_home/
+.DS_Store
+.vscode/
