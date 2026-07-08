@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: bookmaker_odds
+      - name: bookmaker_odds__bookmakers
+      - name: bookmaker_odds__bookmakers__markets
+      - name: bookmaker_odds__bookmakers__markets__outcomes
+      - name: polymarket_markets

@@ -1,0 +1,7 @@
+betting_market_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/warehouse.duckdb
+      schema: main

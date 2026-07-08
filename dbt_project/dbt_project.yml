@@ -1,0 +1,16 @@
+name: betting_market_analytics
+version: "1.0.0"
+profile: betting_market_analytics
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  betting_market_analytics:
+    staging:
+      +materialized: view
+      +schema: silver
+    marts:
+      +materialized: table
+      +schema: gold

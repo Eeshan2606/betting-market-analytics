@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_bookmaker_odds
+    description: Flattened bookmaker odds with implied probabilities, one row per outcome per snapshot.
+    columns:
+      - name: snapshot_ts
+        tests: [not_null]
+      - name: bookmaker
+        tests: [not_null]
+      - name: decimal_odds
+        tests: [not_null]
+      - name: implied_probability
+        tests: [not_null]
