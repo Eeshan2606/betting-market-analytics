@@ -12,3 +12,13 @@ models:
         tests: [not_null]
       - name: implied_probability
         tests: [not_null]
+
+  - name: stg_polymarket_markets
+    description: Parsed Polymarket binary markets, one row per market per snapshot. yes_price is the implied probability.
+    columns:
+      - name: snapshot_ts
+        tests: [not_null]
+      - name: question
+        tests: [not_null]
+      - name: yes_price
+        tests: [not_null]
