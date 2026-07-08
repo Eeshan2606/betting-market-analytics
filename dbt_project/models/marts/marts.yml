@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_world_cup_divergence
+    description: Daily DraftKings vs Polymarket World Cup winner probabilities with vig removed and divergence computed.
+    columns:
+      - name: team
+        tests: [not_null]
+      - name: draftkings_prob
+        tests: [not_null]
+      - name: polymarket_prob
+        tests: [not_null]
+      - name: divergence
+        tests: [not_null]
