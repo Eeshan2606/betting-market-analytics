@@ -13,5 +13,6 @@ dbt_project/target/
 dbt_project/dbt_packages/
 dbt_project/logs/
 .dagster_home/
+.tmp_dagster_home*/
 .DS_Store
 .vscode/

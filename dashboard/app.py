@@ -78,7 +78,7 @@ st.caption(
 
 k1, k2, k3, k4 = st.columns(4)
 top_div = latest.loc[latest["abs_divergence"].idxmax()]
-k1.metric("Latest snapshot", str(latest_date))
+k1.metric("Latest snapshot", pd.Timestamp(latest_date).strftime("%d %b %Y"))
 k2.metric("Teams tracked", f"{latest['team'].nunique()}")
 k3.metric(
     "Largest divergence",
@@ -113,6 +113,7 @@ fig = px.bar(
     y="probability",
     color="source",
     barmode="group",
+    color_discrete_sequence=["#4dabf7", "#e8590c"],
     labels={"probability": "Implied probability", "team": ""},
 )
 fig.update_layout(yaxis_tickformat=".0%", legend_title="")
