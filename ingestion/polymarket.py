@@ -7,6 +7,9 @@ powers line-movement analysis downstream.
 
 from datetime import datetime, timezone
 
+from pathlib import Path
+DB_PATH = Path(__file__).resolve().parents[1] / "data" / "warehouse.duckdb"
+
 import dlt
 import requests
 
@@ -47,7 +50,7 @@ def polymarket_markets():
 def run() -> None:
     pipeline = dlt.pipeline(
         pipeline_name="betting_markets",
-        destination=dlt.destinations.duckdb("data/warehouse.duckdb"),
+        destination=dlt.destinations.duckdb(str(DB_PATH)),
         dataset_name="bronze",
     )
     load_info = pipeline.run(polymarket_markets())
